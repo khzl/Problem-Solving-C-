@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharpPractice1
+{
+    public class Program
+    {
+        public static int CalculateFinalValueY(int x,int y)
+        {
+            for (int i = 1; i <= 4; i++)
+            {
+                for (int j = i; j <= 4; j++)
+                {
+                    y += x + j;
+                }
+                x++;
+            }
+            return y;
+        }
+
+        public static void PrintResults()
+        {
+            int FinalValueOfY = CalculateFinalValueY(3, 0);
+            Console.WriteLine("Final Value Of Y Is : " + FinalValueOfY);
+        }
+
+        static void Main(string[] args)
+        {
+            PrintResults();
+            Console.ReadKey();
+        }
+    }
+}
